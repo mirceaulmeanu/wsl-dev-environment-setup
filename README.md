@@ -27,15 +27,14 @@ Here are some examples:
 - Git Blame
 - Git History
 - KillTasksButton
-- Move TS - Move TypeScript files and update relative imports
 - npm
 - TSLint
 - Visual Studio IntelliCode
 - vscode-styled-components
 
-### 4. In WSL:
+### 4. Fix WSL new folders permissions (https://www.turek.dev/post/fix-wsl-file-permissions/):
 
-1. Create `wsl.conf` in `/etc/` if it doesn't exists. Else, modify to contain this part (For uid and gid check: cat /etc/passwd):
+1. Create `wsl.conf` in `/etc/` if it doesn't exists. Else, modify to contain this part (For uid and gid check: `cat /etc/passwd`):
 
     `user@host:~$ touch /etc/wsl.conf`
     ```
@@ -115,7 +114,7 @@ then:
 
 `user@host:~/.ssh$ chmod 600 *`
 
-### 12. Create symlink for .gitconfig
+### 11. Create symlink for .gitconfig
 
 `user@host:~$ ln -s /c/Users/<user>/.gitconfig ~`
 
@@ -128,7 +127,7 @@ then:
 	upall = "!git branch|cut -c2-|while read B; do git branch --set-upstream-to=\"origin/${B}\" \"${B}\" && git checkout \"$B\" && git up; done"
 ```
 
-### 11. Disable annoying bell beep in terminal / vim / less
+### 12. Disable annoying bell beep in terminal / vim / less
 
 https://stackoverflow.com/questions/36724209/disable-beep-of-linux-bash-on-windows-10
 
