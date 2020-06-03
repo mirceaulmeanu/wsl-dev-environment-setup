@@ -11,7 +11,7 @@ It can also be done from Settings > Updates & Security. Google it.
 
 For WSL2 there's another command. Google it.
 
-### 2. Install WSL - enable first in PowerShell then install Ubuntu from Microsoft Store
+### 2. Install WSL - Install Ubuntu from Microsoft Store
 ```
 user: username
 pass: *********
@@ -54,7 +54,15 @@ Here are some examples:
     fi
     ```
 
+Other wsl config resources:
+
+`https://docs.microsoft.com/en-us/windows/wsl/wsl-config`
+
+`https://devblogs.microsoft.com/commandline/automatically-configuring-wsl/`
+
 ### 5. In Windows create folder `workspace` in C:\
+
+Keep all of your project files and development work in a linked C drive directory. If you do that, even if you have to reinstall the WSL, you won’t lose any work!
 
 ### 6. Restart WSL (by restarting the computer or the wsl service: https://superuser.com/questions/1319478/rebooting-wsl-in-windows-1803)
 Now, C:\ drive is mounted in /c/ instead of /mnt/c/ which is better for Docker
@@ -139,7 +147,7 @@ https://stackoverflow.com/questions/36724209/disable-beep-of-linux-bash-on-windo
 
 	`set visualbell`
 
-3. To disable the beep also in less (i.e. also in man pages and when using "git diff") you need to add export LESS="$LESS -R -Q" in your ~/.profile file.
+3. To disable the beep also in less (i.e. also in man pages and when using "git diff") you need to add `export LESS="$LESS -R -Q"` in your `~/.profile` file.
 
 4. Add to `~/.bashrc` (at the end)
 
@@ -160,3 +168,8 @@ Therefore, creating a symlink for /c/workspace inside the home folder is NOT rec
 ### 2. FOR WHEN IT WILL BREAK:
 
 https://superuser.com/questions/1319478/rebooting-wsl-in-windows-1803
+
+## Other resources:
+
+- https://docs.microsoft.com/en-us/windows/dev-environment/
+- https://docs.microsoft.com/en-us/windows/wsl/interop
